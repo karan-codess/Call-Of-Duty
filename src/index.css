@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+    font-family: 'general', sans-serif;
+    background-color: #dfdff0;
+    overflow-x: hidden;
+  }
+
+  @font-face {
+    font-family: 'zentry';
+    src: url('./assets/fonts/ZENTRY-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+
+  }
+
+  
+  @font-face {
+    font-family: 'thinn';
+    src: url('./assets/fonts/L0x5DF4xlVMF-BfR8bXMIjhLq38.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  }
+   @font-face {
+    font-family: 'cod';
+    src: url('./assets/fonts/cod.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  }
+
+.p_tag{
+  @apply text-white text-xs font-bold tracking-wide font-["thinn"] hover:bg-white hover:text-black px-4 py-1.5 rounded-full transition-colors duration-300 ease-in-out flex items-center justify-center gap-2 max-md:hidden;
+}
+
+
+.mask-clip-path {
+ clip-path: polygon(1% 25%, 93% 7%, 99% 88%, 0 83%);
+  }
+
+  @keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-122%);
+  }
+}
+
+.marquee-text{
+  @apply text-black text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-['cod'] uppercase leading-none tracking-tight;
+}
+.animated {
+  animation: marquee 6s linear infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
