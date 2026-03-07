@@ -46,7 +46,7 @@ const FinalCard = () => {
         >
           Build the foundation for dominate the warfare.
         </h1>
-        <div className="w-full p-2 flex items-center gap-2 md:gap-8 mt-8 justify-center">
+        <div className="w-full p-2 flex items-center gap-2 md:gap-8 mt-6 z-9 md:mt-8 justify-center">
           <img
             src={ps5}
             className="w-24 h-6 md:w-44 md:h-14 rounded-lg border px-5 border-gray-200 shadow-xl invert brightness-0"
@@ -63,16 +63,16 @@ const FinalCard = () => {
             alt=""
           />
         </div>
-        <div className="absolute inset-0 h-full w-full hidden md:block">
+        <div className="absolute inset-0 h-full w-full">
           <img
             src={pngegg}
             alt=""
-            className="absolute bottom-0 left-[-2%] w-[26rem] h-auto"
+            className="absolute bottom-0 w-35 md:left-[-2%] md:w-[26rem] h-auto hidden md:block "
           />
           <img
             src={kid}
             alt=""
-            className="absolute bottom-0 right-[-5%] w-[35rem] h-auto"
+            className="absolute bottom-0 right-[32%] w-40 md:right-[-5%] md:w-[35rem] h-auto"
           />
         </div>
       </div>

@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <p className="text-gray-200 py-6 text-sm md:text-base text-center">
+            <p className="text-gray-200 py-6 text-xs md:text-base text-center">
                 © 2026 Call Of Duty. All rights reserved.
             </p>
 

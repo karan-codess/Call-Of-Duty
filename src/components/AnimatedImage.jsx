@@ -112,9 +112,9 @@ const AnimatedImage = () => {
       </h1>
       <div>
         <h1 ref={headingRef} className='text-black text-[50px] sm:text-[70px] md:text-[80px] lg:text-[100px] font-["zentry"] w-full max-w-xs md:max-w-7xl leading-none tracking-[-0.02em] mt-10'>
-          {splitText("Human life powers AI")}
+          {splitText("War demand skill.")}
           <br />
-          {splitText("and AI expands human potential.")}
+          {splitText("Victory demands precision.")}
         </h1>
       </div>
       <div id="clip" className="w-full mt-30 sm:mt-10 relative">
@@ -125,9 +125,8 @@ const AnimatedImage = () => {
           Soldiers strike hard across every battlefield. Victory awaits! Gear up. Tactical maneuvers decide domination.
         </p>
 
-        <p ref={p2Ref} className="text-gray-600 px-10 font-['thinn'] max-md:hidden leading-tight absolute md:top-28 lg:top-60 text-left max-w-sm">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
-Soldiers storm the front lines with deadly precision. Every shot strikes true! Victory.</p>
+        <p ref={p2Ref} className="text-gray-600 px-10 font-['thinn'] max-md:hidden leading-tight absolute md:top-28 lg:top-60 text-left max-w-lg">
+          Elite operators push through the front lines with precision and tactical skill. Every move is calculated. Every shot counts. Dominate the battlefield and secure victory.</p>
 
         <p ref={p3Ref} className="text-black text-sm md:text-base px-5 md:px-10 font-['thinn'] leading-tight max-lg:hidden absolute lg:bottom-[9%] lg:right-[39%] max-w-4xl">
           Play Call of Duty: Black Ops 7 <br />

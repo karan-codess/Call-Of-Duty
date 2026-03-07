@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Activision from "../assets/images/activision.png";
 import Treyarch from "../assets/images/treyarch.png";
 import Sledgehammer from "../assets/images/shg.png";
@@ -63,6 +63,8 @@ const Back = [
 ];
 
 const Backers = () => {
+  const [hovered, setHovered] = useState(null);
+
   const largeRef = useRef(null);
 
   useEffect(() => {
@@ -94,14 +96,23 @@ const Backers = () => {
             ref={largeRef}
             className="text-gray-500 font-['thinn'] leading-tight text-sm md:text-base px-4 md:px-12 max-w-xs md:max-w-lg"
           >
-            <span className="text-white">Backers fuel every mission and support </span> the team. Their guidance, resources, and dedication build legendary battles. Honor, always.
+            <span className="text-white">
+              Backers fuel every mission and support{" "}
+            </span>{" "}
+            the team. Their guidance, resources, and dedication build legendary
+            battles. Honor, always.
           </p>
         </div>
         <div className="p-1 h-full w-full md:w-[55%] flex flex-col py-8">
           <div className="flex flex-col max-md:items-center gap-4">
             {Back.map((item, index) => (
-              <div key={index}>
-                <div className="flex gap-4">
+              <div
+                key={index}
+                className="relative"
+                onMouseEnter={() => setHovered(index)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <div className="flex gap-2">
                   <div>
                     <p className="text-white font-['thinn'] text-xs ">
                       {item.name}
@@ -119,6 +130,13 @@ const Backers = () => {
                       {item.naam}
                     </h2>
                   </div>
+                  {hovered === index && (
+                    <img
+                      src={item.pic}
+                      alt={item.name}
+                      className="absolute right-0 top-0 w-40 object-contain transition-opacity duration-300 max-lg:hidden"
+                    />
+                  )}
                 </div>
               </div>
             ))}
