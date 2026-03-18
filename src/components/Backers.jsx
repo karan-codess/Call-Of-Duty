@@ -126,7 +126,7 @@ const Backers = () => {
                     />
                   </div>
                   <div>
-                    <h2 className="text-white font-['zentry'] text-6xl leading-[0.7] md:block hidden">
+                    <h2 className="text-white font-['zentry'] text-6xl leading-[0.7] md:block hidden hover:text-yellow-300">
                       {item.naam}
                     </h2>
                   </div>
