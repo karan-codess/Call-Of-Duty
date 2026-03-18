@@ -115,13 +115,13 @@ const AllGames = () => {
     return (
         <div className='relative min-h-screen w-screen overflow-x-hidden px-3 md:px-16 lg:px-20 pt-28 flex flex-col '>
             <h1 className="text-black font-['thinn'] leading-tight max-w-xl max-sm:px-5" >Explore Call Of Duty's All Games</h1>
-            <p className="text-gray-500 font-['thinn'] leading-tight max-sm:px-5 max-w-xs md:max-w-xl">From Warzone’s massive battles to Modern Warfare’s tactical missions, every game delivers intense combat, epic weapons, and nonstop adrenaline.</p>
+            <p className="text-gray-700 font-['thinn'] leading-tight max-sm:px-5 max-w-xs md:max-w-xl">From Warzone’s massive battles to Modern Warfare’s tactical missions, every game delivers intense combat, epic weapons, and nonstop adrenaline.</p>
 
             <div  className='mt-30 md:mt-40 w-full h-[600px] md:h-[500px]'>
-                <div ref={firstRef} className='rounded-2xl bg-[#D3D3E5] flex max-md:flex-col w-full h-full overflow-hidden '>
+                <div ref={firstRef} className='rounded-2xl bg-[#D3D3E5] flex max-md:flex-col w-full h-full overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] '>
                     <div className='flex flex-col gap-1 md:gap-4 w-full md:w-[43%] px-10 h-[300px] md:h-full py-12'>
                         <h1 className="text-black text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare 2</h1>
-                        <p className="text-gray-600 text-sm font-['thinn'] leading-tight max-w-sm">The second game in the Modern Warfare series, featuring intense multiplayer action and a compelling single-player campaign.</p>
+                        <p className="text-gray-700 text-sm font-['thinn'] leading-tight max-w-sm">The second game in the Modern Warfare series, featuring intense multiplayer action and a compelling single-player campaign.</p>
                     </div>
                     <div className='w-full md:w-[57%] h-[300px] md:h-full'>
                         <img src={MW2} alt="Modern Warfare 2" className="w-full h-full object-cover" />
@@ -131,22 +131,24 @@ const AllGames = () => {
 
             <div className='h-[1200px] md:h-[900px] w-full mt-10'>
                 <div className='flex max-md:flex-col w-full h-full gap-8  '>
-                    <div ref={secondRef} className='rounded-2xl bg-[#D3D3E5] h-1/2 md:h-full w-full md:w-[49%] overflow-hidden'>
+                    <div ref={secondRef} className='rounded-2xl bg-[#D3D3E5] h-1/2 md:h-full w-full md:w-[49%] overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                         <div className='flex flex-col'>
                             <div className='h-[300px] md:h-[350px] px-10 py-12 w-full'>
                                 <h1 className="text-black text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare 3</h1>
-                                <p className="text-gray-600 text-sm font-['thinn'] leading-tight max-w-xs">The third game in the Modern Warfare series, featuring intense multiplayer action and a compelling single-player campaign.</p>
+                                <p className="text-gray-700 text-sm font-['thinn'] leading-tight max-w-xs">It features high-stakes battles, thrilling missions, engaging multiplayer gameplay, and a gripping global conflict storyline.
+</p>
                             </div>
                             <div className='h-[300px] md:h-[550px] w-full'>
                                 <img src={MW3} alt="Modern Warfare 3" className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>
-                    <div ref={thirdRef} className='rounded-2xl bg-[#D3D3E5] h-1/2 md:h-full w-full md:w-[49%] overflow-hidden'>
+                    <div ref={thirdRef} className='rounded-2xl bg-[#D3D3E5] h-1/2 md:h-full w-full md:w-[49%] overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                         <div className='flex flex-col'>
                             <div className='h-[250px] md:h-[350px] px-10 py-12 w-full'>
                                 <h1 className="text-black text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Warzone</h1>
-                                <p className="text-gray-600 text-sm font-['thinn'] leading-tight max-w-xs">The third game in the Modern Warfare series, featuring intense multiplayer action and a compelling single-player campaign.</p>
+                                <p className="text-gray-700 text-sm font-['thinn'] leading-tight max-w-xs">Warzone offers large-scale battles, fast-paced action, and intense survival gameplay with a competitive multiplayer experience.
+</p>
                             </div>
                             <div className='h-[350px] md:h-[550px] w-full'>
                                 <video autoPlay muted loop src={CODW} alt="Warzone" className="w-full h-full object-cover" />
@@ -159,16 +161,17 @@ const AllGames = () => {
 
             <div ref={fifthRef} className='mt-12'>
                 <h1 className="text-black font-['thinn'] font-semibold leading-tight max-sm:px-5 max-w-xl" >Explore COD's Most Popular Games</h1>
-                <p className="text-gray-600 text-xs font-['thinn'] leading-tight max-sm:px-5 max-w-lg mt-2" >Dive into the action with Call of Duty’s fan-favorite titles. Experience fast-paced combat, iconic maps, and legendary weapons in every game.</p>
+                <p className="text-gray-800 text-xs font-['thinn'] leading-tight max-sm:px-5 max-w-lg mt-2" >Dive into the action with Call of Duty’s fan-favorite titles. Experience fast-paced combat, iconic maps, and legendary weapons in every game.</p>
             </div>
             <div className='h-[1200px] md:h-[500px] w-full mt-16'>
                 <div className='flex max-md:flex-col w-full h-full gap-8  '>
-                    <div className='rounded-2xl bg-[#D3D3E5] h-1/2 w-full md:h-full md:w-[49%] overflow-hidden'>
+                    <div className='rounded-2xl bg-[#D3D3E5] h-1/2 w-full md:h-full md:w-[49%] overflow-hidden '>
                         <div className='relative w-full h-full'>
                             <video autoPlay muted loop src={CODMW} alt="Modern Warfare" className="w-full h-full object-cover" />
                             <div className='px-10 py-12 w-full absolute top-0'>
                                 <h1 className="text-white text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare</h1>
-                                <p className="text-white text-sm font-['thinn'] leading-tight max-w-xs">The third game in the Modern Warfare series, featuring intense multiplayer action and a compelling single-player campaign.</p>
+                                <p className="text-white text-sm font-['thinn'] leading-tight max-w-xs">The Call of Duty: Modern Warfare features a realistic storyline with intense combat, fast-paced multiplayer, and tactical missions.
+</p>
                             </div>
                         </div>
                     </div>
@@ -177,7 +180,8 @@ const AllGames = () => {
                             <video autoPlay muted loop src={CODBO7} alt="Black Ops 7" className="w-full h-full object-cover" />
                             <div className='px-10 py-12 w-full absolute top-0'>
                                 <h1 className="text-white text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Black Ops 7</h1>
-                                <p className="text-white text-sm font-['thinn'] leading-tight max-w-xs">The third game in the Black Ops series, featuring intense multiplayer action and a compelling single-player campaign.</p>
+                                <p className="text-white text-sm font-['thinn'] leading-tight max-w-xs">The first Black Ops game features a Cold War story with fast-paced multiplayer and intense action-packed missions.
+</p>
                             </div>
                         </div>
                     </div>

@@ -121,11 +121,11 @@ const AnimatedImage = () => {
         <div className="mask-clip-path w-full">
           <img src={big} alt="Big Image" className="w-full h-auto" />
         </div>
-        <p ref={p1Ref} className="text-gray-600 px-5 md:px-10 text-sm sm:text-base font-['thinn'] leading-tight absolute top-[2%] sm:top-[6%] md:top-10 lg:top-40 text-left max-w-xs md:max-w-xl">
+        <p ref={p1Ref} className="text-gray-800 px-5 md:px-10 text-sm sm:text-base font-['thinn'] leading-tight absolute top-[2%] sm:top-[6%] md:top-10 lg:top-40 text-left max-w-xs md:max-w-xl">
           Soldiers strike hard across every battlefield. Victory awaits! Gear up. Tactical maneuvers decide domination.
         </p>
 
-        <p ref={p2Ref} className="text-gray-600 px-10 font-['thinn'] max-md:hidden leading-tight absolute md:top-28 lg:top-60 text-left max-w-lg">
+        <p ref={p2Ref} className="text-gray-800 px-10 font-['thinn'] max-md:hidden leading-tight absolute md:top-28 lg:top-60 text-left max-w-lg">
           Elite operators push through the front lines with precision and tactical skill. Every move is calculated. Every shot counts. Dominate the battlefield and secure victory.</p>
 
         <p ref={p3Ref} className="text-black text-sm md:text-base px-5 md:px-10 font-['thinn'] leading-tight max-lg:hidden absolute lg:bottom-[9%] lg:right-[39%] max-w-4xl">

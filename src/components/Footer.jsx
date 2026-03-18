@@ -1,11 +1,11 @@
 import React from 'react';
-import photo from "../assets/images/what.avif";
+import photo from "../assets/images/builder.png";
 
 const links = ["Contact Us", "Privacy Policy", "Cancellation & Refund Policy", "Terms of Conditions"];
 
 const Footer = () => {
     return (
-        <div className='h-auto w-full bg-black relative overflow-x-hidden px-3 md:px-20 pb-2 md:py-5 flex flex-col items-center'>
+        <div className='h-auto w-full bg-gray-800 relative overflow-x-hidden px-3 md:px-20 pb-2 md:py-5 flex flex-col items-center'>
             <div className="w-full h-px bg-gray-200 my-4"></div>
             
             <div className="flex items-center mt-2 w-full">
@@ -33,7 +33,7 @@ const Footer = () => {
                 <img
                     src={photo}
                     alt="Karan"
-                    className="border w-10 h-10 rounded-lg object-cover"
+                    className="border w-10 h-10 rounded-lg object-cover object-top"
                 />
                 <h3 className="flex items-center text-gray-600 justify-center">
                     Built by ❤️ Karan
