@@ -5,7 +5,6 @@ import CODW from '../assets/images/CODW.mp4'
 import CODMW from '../assets/video/CODMW.mp4'
 import CODBO7 from '../assets/video/CODBO7.mp4'
 import {useEffect,useRef} from 'react'
-import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -19,75 +18,99 @@ const AllGames = () => {
     const fourthRef = useRef(null);
     const fifthRef = useRef(null);
 
-    useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
+    useEffect(() => {
 
         gsap.fromTo(firstRef.current, 
-            { opacity: 0, y: 50, rotateX: -90 }, 
             { 
-                opacity: 1, y: 0, rotateX: 0,
-                duration: 0.9,
+                opacity: 0, 
+                y: 50,
+                rotateX: -90 
+            }, 
+            { 
+                opacity: 1, 
+                y: 0, 
+                rotateX: 0, 
+                duration: 0.9, 
                 ease: "power4.out",
                 scrollTrigger: {
                     trigger: firstRef.current,
                     start: "top 90%",
-                    end: "top 20%",
+                    end: "top 20%", 
                     toggleActions: "play none none reverse",
+                    
                 }
             }
         );
 
         gsap.fromTo(secondRef.current,
-            { opacity: 0, y: 40 },
             {
-                opacity: 1, y: 0,
-                duration: 0.9,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: secondRef.current,
-                    start: "top 80%",
-                    end: "top 20%",
+                opacity:0,
+                y:40
+            },
+            {
+                opacity:1,
+                y:0,
+                duration:0.9,
+                ease:"power3.out",
+                scrollTrigger:{
+                    trigger:secondRef.current,
+                    start:"top 80%",
+                    end:"top 20%",
                     toggleActions: "play none none reverse",
                 }
             }
         );
-
         gsap.fromTo(thirdRef.current,
-            { opacity: 0, y: 40 },
             {
-                opacity: 1, y: 0,
-                duration: 0.9,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: thirdRef.current,
-                    start: "top 70%",
-                    end: "top 20%",
+                opacity:0,
+                y:40
+            },
+            {
+                opacity:1,
+                y:0,
+                duration:0.9,
+                ease:"power3.out",
+                scrollTrigger:{
+                    trigger:thirdRef.current,
+                    start:"top 70%",
+                    end:"top 20%",
                     toggleActions: "play none none reverse",
                 }
             }
         );
 
-        gsap.fromTo(fifthRef.current,
-            { opacity: 0, y: 40 },
+        gsap.fromTo(fourthRef.current,
             {
-                opacity: 1, y: 0,
+                opacity: 0,
+                y: 40
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                delay: 0.3
+            }
+        );
+        gsap.fromTo(fifthRef.current,
+            {
+                opacity: 0,
+                y: 40
+            },
+            {
+                opacity: 1,
+                y: 0,
                 duration: 0.9,
                 ease: "power3.out",
-                scrollTrigger: {
-                    trigger: fifthRef.current,
-                    start: "top 90%",
-                    end: "top 20%",
+                scrollTrigger:{
+                    trigger:fifthRef.current,
+                    start:"top 90%",
+                    end:"top 20%",
                     toggleActions: "play none none none",
                 }
             }
-        );
-
-    });
-
-    ScrollTrigger.refresh();
-
-    return () => ctx.revert();
-}, []);
+        )
+    }, []);
 
     return (
         <div className='relative min-h-screen w-screen overflow-x-hidden px-3 md:px-16 lg:px-20 pt-28 flex flex-col '>
