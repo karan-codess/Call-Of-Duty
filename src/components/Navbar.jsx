@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="bg-transparent px-2 md:px-3 py-2 z-10 fixed top-0 w-full">
       <div className="bg-transparent border-gray-200/20 border rounded-lg px-3 md:px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-4 md:gap-8">
+        <div className="flex items-center gap-2 md:gap-8">
           <img
             className="w-32 md:w-44 h-auto invert brightness-0"
             src={COD}
@@ -21,12 +21,12 @@ const Navbar = () => {
               href="https://www.callofduty.com/store/games"
               target="_blank"
               rel="noopener noreferrer"
-              className='text-black flex items-center justify-center gap-2 text-[10px] sm:text-xs font-bold font-["thinn"] bg-white px-4 py-1.5 rounded-full tracking-wide'
+              className='text-black flex items-center justify-center gap-2 text-[8px] sm:text-xs font-bold font-["thinn"] bg-white px-4 py-1.5 rounded-full tracking-wide'
             >
-              GAMES <TbArrowBadgeDownFilled className="text-[12px]" />
+              GAMES <TbArrowBadgeDownFilled className="text-[10px] sm:text-[12px] " />
             </a>
             <div className="relative group inline-block">
-              <p className='text-black text-[10px] sm:text-xs font-bold font-["thinn"] bg-white px-4 py-1.5 rounded-full tracking-wide'>
+              <p className='text-black text-[8px] sm:text-xs font-bold font-["thinn"] bg-white px-4 py-1.5 rounded-full tracking-wide'>
                 ESPORTS
               </p>
               <div className='bg-gray-300 h-30 p-1 gap-1 rounded-lg font-["thinn"] flex flex-col w-55 absolute top-8 left-0 hidden group-hover:flex'>

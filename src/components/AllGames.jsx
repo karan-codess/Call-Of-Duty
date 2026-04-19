@@ -5,6 +5,7 @@ import CODW from '../assets/images/CODW.mp4'
 import CODMW from '../assets/video/CODMW.mp4'
 import CODBO7 from '../assets/video/CODBO7.mp4'
 import {useEffect,useRef} from 'react'
+import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -18,99 +19,75 @@ const AllGames = () => {
     const fourthRef = useRef(null);
     const fifthRef = useRef(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
 
         gsap.fromTo(firstRef.current, 
+            { opacity: 0, y: 50, rotateX: -90 }, 
             { 
-                opacity: 0, 
-                y: 50,
-                rotateX: -90 
-            }, 
-            { 
-                opacity: 1, 
-                y: 0, 
-                rotateX: 0, 
-                duration: 0.9, 
+                opacity: 1, y: 0, rotateX: 0,
+                duration: 0.9,
                 ease: "power4.out",
                 scrollTrigger: {
                     trigger: firstRef.current,
                     start: "top 90%",
-                    end: "top 20%", 
+                    end: "top 20%",
                     toggleActions: "play none none reverse",
-                    
                 }
             }
         );
 
         gsap.fromTo(secondRef.current,
+            { opacity: 0, y: 40 },
             {
-                opacity:0,
-                y:40
-            },
-            {
-                opacity:1,
-                y:0,
-                duration:0.9,
-                ease:"power3.out",
-                scrollTrigger:{
-                    trigger:secondRef.current,
-                    start:"top 80%",
-                    end:"top 20%",
-                    toggleActions: "play none none reverse",
-                }
-            }
-        );
-        gsap.fromTo(thirdRef.current,
-            {
-                opacity:0,
-                y:40
-            },
-            {
-                opacity:1,
-                y:0,
-                duration:0.9,
-                ease:"power3.out",
-                scrollTrigger:{
-                    trigger:thirdRef.current,
-                    start:"top 70%",
-                    end:"top 20%",
+                opacity: 1, y: 0,
+                duration: 0.9,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: secondRef.current,
+                    start: "top 80%",
+                    end: "top 20%",
                     toggleActions: "play none none reverse",
                 }
             }
         );
 
-        gsap.fromTo(fourthRef.current,
+        gsap.fromTo(thirdRef.current,
+            { opacity: 0, y: 40 },
             {
-                opacity: 0,
-                y: 40
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1.2,
-                ease: "power3.out",
-                delay: 0.3
-            }
-        );
-        gsap.fromTo(fifthRef.current,
-            {
-                opacity: 0,
-                y: 40
-            },
-            {
-                opacity: 1,
-                y: 0,
+                opacity: 1, y: 0,
                 duration: 0.9,
                 ease: "power3.out",
-                scrollTrigger:{
-                    trigger:fifthRef.current,
-                    start:"top 90%",
-                    end:"top 20%",
+                scrollTrigger: {
+                    trigger: thirdRef.current,
+                    start: "top 70%",
+                    end: "top 20%",
+                    toggleActions: "play none none reverse",
+                }
+            }
+        );
+
+        gsap.fromTo(fifthRef.current,
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1, y: 0,
+                duration: 0.9,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: fifthRef.current,
+                    start: "top 90%",
+                    end: "top 20%",
                     toggleActions: "play none none none",
                 }
             }
-        )
-    }, []);
+        );
+
+    });
+
+    ScrollTrigger.refresh();
+
+    return () => ctx.revert();
+}, []);
 
     return (
         <div className='relative min-h-screen w-screen overflow-x-hidden px-3 md:px-16 lg:px-20 pt-28 flex flex-col '>
@@ -120,7 +97,7 @@ const AllGames = () => {
             <div  className='mt-30 md:mt-40 w-full h-[600px] md:h-[500px]'>
                 <div ref={firstRef} className='rounded-2xl bg-[#D3D3E5] flex max-md:flex-col w-full h-full overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] '>
                     <div className='flex flex-col gap-1 md:gap-4 w-full md:w-[43%] px-10 h-[300px] md:h-full py-12'>
-                        <h1 className="text-black text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare 2</h1>
+                        <h1 className="text-black text-5xl sm:text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare 2</h1>
                         <p className="text-gray-700 text-sm font-['thinn'] leading-tight max-w-sm">The second game in the Modern Warfare series, featuring intense multiplayer action and a compelling single-player campaign.</p>
                     </div>
                     <div className='w-full md:w-[57%] h-[300px] md:h-full'>
@@ -134,7 +111,7 @@ const AllGames = () => {
                     <div ref={secondRef} className='rounded-2xl bg-[#D3D3E5] h-1/2 md:h-full w-full md:w-[49%] overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                         <div className='flex flex-col'>
                             <div className='h-[300px] md:h-[350px] px-10 py-12 w-full'>
-                                <h1 className="text-black text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare 3</h1>
+                                <h1 className="text-black text-5xl sm:text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Modern Warfare 3</h1>
                                 <p className="text-gray-700 text-sm font-['thinn'] leading-tight max-w-xs">It features high-stakes battles, thrilling missions, engaging multiplayer gameplay, and a gripping global conflict storyline.
 </p>
                             </div>
@@ -146,7 +123,7 @@ const AllGames = () => {
                     <div ref={thirdRef} className='rounded-2xl bg-[#D3D3E5] h-1/2 md:h-full w-full md:w-[49%] overflow-hidden shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                         <div className='flex flex-col'>
                             <div className='h-[250px] md:h-[350px] px-10 py-12 w-full'>
-                                <h1 className="text-black text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Warzone</h1>
+                                <h1 className="text-black text-5xl sm:text-6xl font-['zentry'] leading-tight max-w-xl" >COD : Warzone</h1>
                                 <p className="text-gray-700 text-sm font-['thinn'] leading-tight max-w-xs">Warzone offers large-scale battles, fast-paced action, and intense survival gameplay with a competitive multiplayer experience.
 </p>
                             </div>

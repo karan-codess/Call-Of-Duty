@@ -72,7 +72,7 @@ const FinalCard = () => {
           <img
             src={kid}
             alt=""
-            className="absolute bottom-0 right-[32%] w-40 md:right-[-5%] md:w-[35rem] h-auto"
+            className="absolute bottom-0 right-[32%] w-40 md:right-[-5%] md:w-[35rem] hidden md:block h-auto"
           />
         </div>
       </div>

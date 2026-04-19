@@ -121,7 +121,7 @@ const AnimatedImage = () => {
         <div className="mask-clip-path w-full">
           <img src={big} alt="Big Image" className="w-full h-auto" />
         </div>
-        <p ref={p1Ref} className="text-gray-800 px-5 md:px-10 text-sm sm:text-base font-['thinn'] leading-tight absolute top-[2%] sm:top-[6%] md:top-10 lg:top-40 text-left max-w-xs md:max-w-xl">
+        <p ref={p1Ref} className="text-gray-800 px-5 md:px-10 text-sm sm:text-base font-['thinn'] leading-tight absolute top-[1%] sm:top-[6%] md:top-10 lg:top-40 text-left max-w-xs md:max-w-xl">
           Soldiers strike hard across every battlefield. Victory awaits! Gear up. Tactical maneuvers decide domination.
         </p>
 
